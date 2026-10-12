@@ -39,7 +39,33 @@ public class ArrayProblems {
 
 
    //p4: find maximum element in an array
-   
+   static int findMaxElement(int arr[]){
+       int max = arr[0];
+       for(int i=0; i<arr.length; i++){
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+      }
+       return max;
+   }
+
+
+   //p5: sum of +ve and -ve numbers
+   static int[] sumOfPositiveAndNegativeNumbers(int arr[]){
+    int size = arr.length;
+    int positiveSum = 0;
+    int negativeSum = 0;
+    for(int i=0; i<arr.length; i++){
+        if(arr[i]>0){
+            positiveSum = positiveSum + arr[i];
+        }
+        else{
+            negativeSum = negativeSum + arr[i];
+        }
+    }
+    int ans[] = {positiveSum , negativeSum};
+    return ans;
+   }
 
 
     public static void main(String[] args) {
@@ -64,8 +90,19 @@ public class ArrayProblems {
 
 
     //p4
+    // int arr[] = {5,4,6,3,2,8,9,7};
+    // int ans = findMaxElement(arr);
+    //   System.out.println(ans);
+        //Math.max() function understand and solve using it.
 
-        
+
+    //p5
+    int arr[] = { 2,3,-2,4,-3,-4,5,8,-9,-7,6};
+    int ans[] = sumOfPositiveAndNegativeNumbers(arr);
+    System.out.println("Positive sum " + ans[0]);
+    System.out.println("Negative sum " + ans[1]);
+     
+
     }
     
 }
