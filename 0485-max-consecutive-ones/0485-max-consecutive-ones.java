@@ -4,13 +4,13 @@ class Solution {
         int maxCount =0;
         for(int i=0; i<nums.length; i++){
             if(nums[i]==1){
-              count =count +1;
+              count = count +1;
               maxCount = Math.max(maxCount,count);
             }else{
-                count =0;
+                count = 0;
             }
         }
         return maxCount;
-
+  
     }
 }
